@@ -6,10 +6,12 @@ export default function Header() {
   return (
     <header className="bg-white fixed inset-x-0 top-0 z-50 shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 text-2xl font-bold text-red-600">
+        <div className="flex items-center space-x-8">
+          <a href="/" className="text-2xl font-bold text-red-600">
             edgeble
           </a>
+          <a href="#" className="text-sm font-semibold text-gray-900">For home</a>
+          <a href="#" className="text-sm font-semibold text-gray-900">For industry</a>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -21,9 +23,7 @@ export default function Header() {
             {mobileMenuOpen ? '✕' : '≡'}
           </button>
         </div>
-        <div className={`hidden lg:flex lg:gap-x-8 ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-          <a href="#" className="text-sm font-semibold text-gray-900">For home</a>
-          <a href="#" className="text-sm font-semibold text-gray-900">For industry</a>
+        <div className={`hidden lg:flex lg:gap-x-8`}>
           <a href="#" className="text-sm font-semibold text-gray-900">Hardware</a>
           <a href="#" className="text-sm font-semibold text-gray-900">Software</a>
           <a href="#" className="text-sm font-semibold text-gray-900">Documentation</a>
@@ -47,4 +47,3 @@ export default function Header() {
     </header>
   );
 }
-
